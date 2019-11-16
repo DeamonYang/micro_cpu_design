@@ -4,7 +4,7 @@
 @description: instruction decoder
 =================================================================
 revision		data		author		commit
-  0.1		2019/11/13	  deamonyang	draft
+  0.1		2019/11/15	  deamonyang	draft
 ****************************************************************/
 `include "cpu.h"
 `include "isa.h"
