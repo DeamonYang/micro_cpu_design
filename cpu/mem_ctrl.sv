@@ -23,7 +23,7 @@ module mem_ctrl#(
 		output	logic 								addrs_o				,
 		output	logic 								rw_o				,
 		output	logic 	[WORD_DATA_WIDTH-1:0]		wr_data_o			,
-		output	logic 	[WORD_DATA_WIDTH-1:0]		out_o					,
+		output	logic 	[WORD_DATA_WIDTH-1:0]		out_o				,
 		output	logic 								miss_align_o		
 	);
 	
@@ -31,7 +31,7 @@ module mem_ctrl#(
 
 	assign wr_data_o = exe_mem_wr_data_i;
 	assign addr_o = exe_out_i[WORD_DATA_WIDTH-1:MEM_OP_BUS];
-	assign offset = exe_out_i[MEM_OP_BUS-1:0];
+	assign offset = exe_out_i[MEM_OP_BUS-1:0];		//address offset LSBS [1:0]
 	
 	always_comb@(*)begin
 		miss_align_o	= 1'b0;
